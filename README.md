@@ -1,4 +1,4 @@
-# HashiCorp Vault Demo with Spring Cloud Vault (local Vault and PCF Value Service)
+# HashiCorp Vault Demo with Spring Cloud Vault (local Vault and PCF Vault Service)
 
 Demo Application demonstrating values from a Hashicorp Vault instance using Spring Cloud Vault
 
