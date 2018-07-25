@@ -2,7 +2,7 @@
 
 Demo Application demonstrating values from a Hashicorp Vault instance using Spring Cloud Vault
 
-# Use-Case / Alternatives
+# Use-Case / Alternatives / What is Vault for ? 
 
 > TODO
 
