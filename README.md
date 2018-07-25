@@ -2,7 +2,7 @@
 
 Demo Application demonstrating values from a Hashicorp Vault instance using Spring Cloud Vault
 
-# Use-Case / Alternatives / What is Vault for ? 
+# Use-Case / Alternatives / What is Vault for ?
 
 > TODO
 
@@ -77,13 +77,13 @@ curl http://localhost:8080
 
 # Notes
 
-1. Vault Config settings are in bootstrap.properties file and not application.properties.
+## 1. Vault Config settings are in bootstrap.properties file and not application.properties.
 
-2. The setting of *spring.application.name* in the bootstrap.properties file, this value will be used when accessing the Vault Storage.
+## 2. The setting of *spring.application.name* in the bootstrap.properties file, this value will be used when accessing the Vault Storage.
 
-3. Loading of the Vault secret is performed using *Value* annotation in the *WebController* - same way as loading Values from a config server.
+## 3. Loading of the Vault secret is performed using *Value* annotation in the *WebController* - same way as loading Values from a config server.
 
-4. Spring Cloud Vault Config reads config properties from Vaults using the application name and active profiles:
+## 4. Spring Cloud Vault Config reads config properties from Vaults using the application name and active profiles:
 
 ```
 /secret/{application}/{profile}
@@ -92,7 +92,7 @@ curl http://localhost:8080
 /secret/{default-context}
 ```
 
-5. Addition of default secret loading *:#{null}}* to ensure application loads even if vaultSecret value isn't found.
+## 5. Addition of default secret loading *:#{null}}* to ensure application loads even if vaultSecret value isn't found.
 
 ```java
 @Value("${vaultSecret:#{null}}")
@@ -113,7 +113,7 @@ Set valueSecret to a default text string *defaultValue* , if vaultSecret is not 
 private String vaultSecret;
 ```
 
-6. Reloading Values from Vault
+## 6. Reloading Values from Vault
 
 A restart will always cause to reload of values from Vault.
 
