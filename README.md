@@ -10,7 +10,7 @@ Demo Application demonstrating values from a Hashicorp Vault instance using Spri
 
 ## Local Vault Setup
 
-*for local development testing purposes*
+*For local development testing purposes*
 
 ### Download Vault
 
@@ -62,8 +62,6 @@ curl http://localhost:8080
 ```
 
 > You should see the correct value of *hiddenValue* loaded.
-
-### Add
 
 ## PCF Vault Setup
 
