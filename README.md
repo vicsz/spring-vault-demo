@@ -22,7 +22,7 @@ Download from : https://www.vaultproject.io/downloads.html
 ./vault server -dev -dev-root-token-id=00000000-0000-0000-0000-000000000000
 ```
 
-> Note - storage is *in-memory* , and will need to be re-populate / re-configured every time you re-start vault.
+> Note - storage is *in-memory* , and will need to be re-populated / re-configured every time you re-start vault.
 
 > Note - you can access the local Vault GUI at http://localhost:8200
 
@@ -115,6 +115,20 @@ private String vaultSecret;
 
 6. Reloading Values from Vault
 
-> TODO
+A restart will always cause to reload of values from Vault.
+
+For re-loading values **without** a restart, you can use the *refresh actuator* endpoint.
+
+This will require the Actuator Spring Boot Dependency, and the refresh endpoint exposed (see application.properties file).
+
+Also note the required addition of the RefreshScope annotation in the WebController.
+
+To force a reload of values, the *refresh* endpoint needs to be hit:
+
+```sh
+curl -X POST http://localhost:8080/actuator/refresh
+```
+
+
 
 
