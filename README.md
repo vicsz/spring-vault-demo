@@ -72,7 +72,7 @@ Create and Bind the Service using the *cf create-service* and *cf bind-service* 
 
 ### Adding Values to a PCF Vault Instance
 
-> TODO
+Determined at your Organization Level .. contact your HashiCorp / PCF Admin for more info.
 
 # Notes
 
