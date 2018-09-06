@@ -61,9 +61,14 @@ curl http://localhost:8080
 
 ## PCF Vault Setup
 
-### Create and Bind the Service
+### Adding the Service
 
-> TODO
+Verify the Hashicorp Vault Broker Service existing in the CF Marketplace:
+
+```sh
+cf marketplace
+```
+Create and Bind the Service using the *cf create-service* and *cf bind-service* commands. 
 
 ### Adding Values to a PCF Vault Instance
 
